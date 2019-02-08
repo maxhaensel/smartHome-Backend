@@ -9,6 +9,7 @@ let currentVal = 0
 
 exports.webSocketServer = () => {
   wss.on('connection', (ws, req) => {
+    console.log('asd')
     // const auth = req.headers['authorization']
     // const pureAuthStr = auth.replace('Basic ', '').trim()
     // const username = base64.decode(pureAuthStr).split(':')[0]
