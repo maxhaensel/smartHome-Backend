@@ -22,7 +22,7 @@ exports.webSocketServer = () => {
     userMap.set(username, ws)
 
     ws.on('message', data => {
-      //1
+      console.log('message')
       try {
         json = JSON.parse(data)
       } catch (e) {
