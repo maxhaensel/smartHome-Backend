@@ -20,19 +20,19 @@ app.use(function(req, res, next) {
 
 app.post('/changelight', (req, res) => {
   if (req.body.brightness !== oldColor) {
-    const string = `{brightness: ${req.body.brightness}, start: ${oldColor} }`
-    console.log(string)
-    //   request.post(
-    //     {
-    //       headers: { 'content-type': 'application/json' },
-    //       url: 'http://10.0.0.100/api/v1/state',
-    //       body: `{brightness: ${req.body.brightness}, start: ${oldColor} }`
-    //     },
-    //     function(err, response, body) {
-    //       if (err) console.log(err)
-    //       console.log(response)
-    //     }
-    //   )
+    // const string = `{brightness: ${req.body.brightness}, start: ${oldColor} }`
+    // console.log(string)
+    request.post(
+      {
+        headers: { 'content-type': 'application/json' },
+        url: 'http://10.0.0.100/api/v1/state',
+        body: `{brightness: ${req.body.brightness}, start: ${oldColor} }`
+      },
+      function(err, response, body) {
+        if (err) console.log(err)
+        console.log(response)
+      }
+    )
     oldColor = req.body.brightness
   }
 
