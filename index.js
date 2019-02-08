@@ -6,7 +6,7 @@ require('./api')
 const WebSocket = require('ws')
 const base64 = require('base-64')
 
-const wss = new WebSocket.Server({ port: 1000, path: '/' })
+const wss = new WebSocket.Server({ port: 3001, path: '/' })
 const userMap = new Map()
 let currentVal = 0
 
