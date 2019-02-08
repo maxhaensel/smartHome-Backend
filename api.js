@@ -6,7 +6,7 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-const port = 5000
+const port = 3002
 let oldColor = 0
 
 app.use(function(req, res, next) {
