@@ -11,7 +11,6 @@ const userMap = new Map()
 let currentVal = 0
 
 wss.on('connection', (ws, req) => {
-  console.log(ws)
   // const auth = req.headers['authorization']
   // const pureAuthStr = auth.replace('Basic ', '').trim()
   // const username = base64.decode(pureAuthStr).split(':')[0]
@@ -25,7 +24,6 @@ wss.on('connection', (ws, req) => {
   userMap.set(username, ws)
 
   ws.on('message', data => {
-    console.log('message')
     try {
       json = JSON.parse(data)
     } catch (e) {
