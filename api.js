@@ -30,7 +30,6 @@ app.post('/changelight', (req, res) => {
       },
       function(err, response, body) {
         if (err) console.log(err)
-        console.log(response)
       }
     )
     oldColor = req.body.brightness
